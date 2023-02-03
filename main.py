@@ -12,13 +12,13 @@ class My_Application(QWidget):
         self.ui.setupUi(self)
 
         self.scene = QtWidgets.QGraphicsScene(self)
-        pixmap = QPixmap("bigger_map.png")
+        pixmap = QPixmap("images/bigger_map.png")
         item = QtWidgets.QGraphicsPixmapItem(pixmap)
         self.scene.addItem(item)
         self.ui.graphicsView.setScene(self.scene)
         self.radioButtons = [self.ui.radioButton, self.ui.radioButton_2, self.ui.radioButton_3, self.ui.radioButton_4]
         self.stickerOffsets = [[3, 12], [15, 15], [13, 14], [17, 13]]
-        self.stickerFilePaths = ['exclamation_point.png', 'smol_sprinkler.png', 'smol_wormsy.png', 'smol_car.png']
+        self.stickerFilePaths = ['images/exclamation_point.png', 'images/smol_sprinkler.png', 'images/smol_wormsy.png', 'images/smol_car.png']
         self.selectedRadioButton = None
         self.ui.pushButton.clicked.connect(self.button_pushed)
 
